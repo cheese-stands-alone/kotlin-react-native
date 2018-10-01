@@ -13,8 +13,9 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-js"
-    compile 'org.jetbrains:kotlin-react:16.5.0-pre.54-kotlin-1.2.70'
-    testCompile "org.jetbrains.kotlin:kotlin-test-js"
+    compile('org.jetbrains:kotlin-react:16.5.0-pre.54-kotlin-1.2.70') {
+        exclude group: 'org.jetbrains.kotlinx', module: 'kotlinx-html-js'
+    }
 }
 
 compileKotlin2Js {
